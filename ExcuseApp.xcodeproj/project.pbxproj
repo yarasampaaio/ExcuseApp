@@ -19,6 +19,10 @@
 		B9BD06D328FECB800028C6B4 /* GetExcuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06D228FECB800028C6B4 /* GetExcuse.swift */; };
 		B9BD06D928FED09B0028C6B4 /* GeratorExcuseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06D828FED09B0028C6B4 /* GeratorExcuseView.swift */; };
 		B9BD06DB28FED0A50028C6B4 /* GeratorExcuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06DA28FED0A50028C6B4 /* GeratorExcuseViewController.swift */; };
+		B9BD06DE290038560028C6B4 /* ExcusesUsedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06DD290038560028C6B4 /* ExcusesUsedView.swift */; };
+		B9BD06E229003D4E0028C6B4 /* ExcuseUsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06E129003D4E0028C6B4 /* ExcuseUsedViewController.swift */; };
+		B9BD06E52900ED8F0028C6B4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06E42900ED8F0028C6B4 /* TableViewCell.swift */; };
+		B9BD06E729016D4D0028C6B4 /* PersisteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BD06E629016D4D0028C6B4 /* PersisteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		B9BD06D228FECB800028C6B4 /* GetExcuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExcuse.swift; sourceTree = "<group>"; };
 		B9BD06D828FED09B0028C6B4 /* GeratorExcuseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeratorExcuseView.swift; sourceTree = "<group>"; };
 		B9BD06DA28FED0A50028C6B4 /* GeratorExcuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeratorExcuseViewController.swift; sourceTree = "<group>"; };
+		B9BD06DD290038560028C6B4 /* ExcusesUsedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcusesUsedView.swift; sourceTree = "<group>"; };
+		B9BD06E129003D4E0028C6B4 /* ExcuseUsedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcuseUsedViewController.swift; sourceTree = "<group>"; };
+		B9BD06E42900ED8F0028C6B4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B9BD06E629016D4D0028C6B4 /* PersisteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersisteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +113,9 @@
 		B9BD069C28FEC7670028C6B4 /* ExcuseApp */ = {
 			isa = PBXGroup;
 			children = (
-				B9BD06D428FED0410028C6B4 /* View */,
+				B9BD06E32900ED740028C6B4 /* Cell */,
+				B9BD06D728FED0800028C6B4 /*  GeratorExcuse */,
+				B9BD06DC290037E20028C6B4 /* ExcusesUsed */,
 				B9BD06D128FECB6B0028C6B4 /* Service */,
 				B9BD06CE28FECB310028C6B4 /* Model */,
 				B9BD069D28FEC7670028C6B4 /* AppDelegate.swift */,
@@ -121,7 +131,7 @@
 		B9BD06B328FEC7680028C6B4 /* ExcuseAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9BD06B428FEC7680028C6B4 /* ExcuseAppTests.swift */,
+				B9BD06E8290193680028C6B4 /* ModelExcuseTest */,
 			);
 			path = ExcuseAppTests;
 			sourceTree = "<group>";
@@ -147,16 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				B9BD06D228FECB800028C6B4 /* GetExcuse.swift */,
+				B9BD06E629016D4D0028C6B4 /* PersisteService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		B9BD06D428FED0410028C6B4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B9BD06D728FED0800028C6B4 /*  GeratorExcuse */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		B9BD06D728FED0800028C6B4 /*  GeratorExcuse */ = {
@@ -166,6 +169,31 @@
 				B9BD06DA28FED0A50028C6B4 /* GeratorExcuseViewController.swift */,
 			);
 			path = " GeratorExcuse";
+			sourceTree = "<group>";
+		};
+		B9BD06DC290037E20028C6B4 /* ExcusesUsed */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD06DD290038560028C6B4 /* ExcusesUsedView.swift */,
+				B9BD06E129003D4E0028C6B4 /* ExcuseUsedViewController.swift */,
+			);
+			path = ExcusesUsed;
+			sourceTree = "<group>";
+		};
+		B9BD06E32900ED740028C6B4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD06E42900ED8F0028C6B4 /* TableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B9BD06E8290193680028C6B4 /* ModelExcuseTest */ = {
+			isa = PBXGroup;
+			children = (
+				B9BD06B428FEC7680028C6B4 /* ExcuseAppTests.swift */,
+			);
+			path = ModelExcuseTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,8 +352,12 @@
 				B9BD06D928FED09B0028C6B4 /* GeratorExcuseView.swift in Sources */,
 				B9BD06D028FECB510028C6B4 /* ExcuseModel.swift in Sources */,
 				B9BD06A028FEC7670028C6B4 /* SceneDelegate.swift in Sources */,
+				B9BD06E52900ED8F0028C6B4 /* TableViewCell.swift in Sources */,
+				B9BD06E729016D4D0028C6B4 /* PersisteService.swift in Sources */,
+				B9BD06DE290038560028C6B4 /* ExcusesUsedView.swift in Sources */,
 				B9BD06D328FECB800028C6B4 /* GetExcuse.swift in Sources */,
 				B9BD06DB28FED0A50028C6B4 /* GeratorExcuseViewController.swift in Sources */,
+				B9BD06E229003D4E0028C6B4 /* ExcuseUsedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

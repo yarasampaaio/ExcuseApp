@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class GetService {
     static func getExcuses() async throws -> [ExcuseModel] {
         do {

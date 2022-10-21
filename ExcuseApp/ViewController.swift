@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     var allExcuse: [ExcuseModel] = []
-    var excuseUsadas: [ExcuseModel]?
+    var excuseUsadas: [ExcuseModel] = []
     var excuseCaptadas: [ExcuseModel] = []
-    
+
     lazy var excuseLabel: UILabel = {
         let frase = UILabel()
         frase.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         frase.numberOfLines = 0
         return frase
     }()
-    
+
 //    var button: UIButton {
 //        let button = UIButton(type: .system)
 //        button.translatesAutoresizingMaskIntoConstraints = false
@@ -46,9 +46,10 @@ class ViewController: UIViewController {
             //        print(excuseEscolhida)
             return escolhida
         }
+
         func persisteExcuse() {
             guard let escolhida = findExcuse() else { return }
-            excuseUsadas?.append(escolhida)
+            excuseUsadas.append(escolhida)
             do {
                 var data = try JSONEncoder().encode(excuseUsadas)
                 let url = getDocumentsDirectory().appendingPathComponent("excuse.txt")
@@ -62,12 +63,12 @@ class ViewController: UIViewController {
         }
         //        print(excuseEscolhida)
         //            print(url)
-        func pesquiseArquivo() {
+        func carregarExcuses() {
             do {
                 let url = getDocumentsDirectory().appendingPathComponent("excuse.txt")
                 let data = try Data(contentsOf: url)
-                var excuses = try JSONDecoder().decode([ExcuseModel].self, from: data)
-                print(excuses)
+                excuseUsadas = try JSONDecoder().decode([ExcuseModel].self, from: data)
+                print(excuseUsadas.count)
                 //            try data2.write(to: excuseCaptadas)
             } catch {
                 print(error.localizedDescription)
@@ -89,6 +90,9 @@ class ViewController: UIViewController {
             self.view.backgroundColor = .white
             Task {
                 allExcuse = try await GetService.getExcuses()
+                
+                carregarExcuses()
+                persisteExcuse()
                 self.view.addSubview(self.excuseLabel)
                 self.configConstrainsts()
             }
@@ -103,4 +107,9 @@ class ViewController: UIViewController {
                 self.excuseLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
             ])
         }
+//    @objc func buttonTapped() {
+//        let tableView = TableView()
+//        tableView.array = teuArray
+//        navigationController?.pushViewController(tableView(), animated: true)
+//    }
     }
