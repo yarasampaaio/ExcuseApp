@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B9BD06E32900ED740028C6B4 /* Cell */,
-				B9BD06D728FED0800028C6B4 /*  GeratorExcuse */,
+				B9BD06D728FED0800028C6B4 /* GeratorExcuse */,
 				B9BD06DC290037E20028C6B4 /* ExcusesUsed */,
 				B9BD06D128FECB6B0028C6B4 /* Service */,
 				B9BD06CE28FECB310028C6B4 /* Model */,
@@ -162,13 +162,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		B9BD06D728FED0800028C6B4 /*  GeratorExcuse */ = {
+		B9BD06D728FED0800028C6B4 /* GeratorExcuse */ = {
 			isa = PBXGroup;
 			children = (
 				B9BD06D828FED09B0028C6B4 /* GeratorExcuseView.swift */,
 				B9BD06DA28FED0A50028C6B4 /* GeratorExcuseViewController.swift */,
 			);
-			path = " GeratorExcuse";
+			path = GeratorExcuse;
 			sourceTree = "<group>";
 		};
 		B9BD06DC290037E20028C6B4 /* ExcusesUsed */ = {

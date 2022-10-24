@@ -29,8 +29,7 @@ class GeratorExcuseViewController: UIViewController {
         guard let escolhida = allExcuse.randomElement() else { return nil }
         return escolhida
     }
-    
-    private func buttonNextPageUsed() {
+private func buttonNextPageUsed() {
         self.navigationController?.pushViewController(ExcuseUsedViewController(), animated: true)
     }
 }
@@ -41,9 +40,8 @@ extension GeratorExcuseViewController: GeratorExcuseDelegate {
             persisteService.persisteExcuse(excuse: excuse)
         }
     }
-    
     func callApi() {
-        Task {
+    Task {
             allExcuse = try await GetService.getExcuses()
             let excuseRandom = findExcuse()
             curentExcused = excuseRandom
